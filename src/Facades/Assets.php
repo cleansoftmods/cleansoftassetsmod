@@ -6,6 +6,7 @@ class Assets extends Facade
 {
     /**
      * @return string
+     * @author sangnm <sang.nguyenminh@elinext.com>
      */
     protected static function getFacadeAccessor()
     {
