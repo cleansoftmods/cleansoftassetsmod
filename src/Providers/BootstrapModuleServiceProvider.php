@@ -20,7 +20,7 @@ class BootstrapModuleServiceProvider extends ServiceProvider
     {
         /*\DashboardMenu::registerItem([
             'id' => 'webed-assets-management',
-            'piority' => 999,
+            'priority' => 999,
             'parent_id' => 'webed-configuration',
             'heading' => null,
             'title' => 'Assets',
