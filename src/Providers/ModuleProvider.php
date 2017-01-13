@@ -8,7 +8,9 @@ class ModuleProvider extends ServiceProvider
 {
     public function boot()
     {
-
+        $this->publishes([
+            __DIR__ . '/../../resources/public' => public_path(),
+        ], 'webed-public-assets');
     }
 
     public function register()

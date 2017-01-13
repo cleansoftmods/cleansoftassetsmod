@@ -334,7 +334,31 @@ return [
                     'local' => asset('admin/plugins/underscore/underscore-min.js'),
                     'cdn' => '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'
                 ]
-            ]
+            ],
+            'morris' => [
+                'use_cdn' => true,
+                'location' => 'bottom',
+                'src' => [
+                    'local' => [
+                        asset('admin/plugins/morris/raphael-min.js'),
+                        asset('admin/plugins/morris/morris.min.js'),
+                    ],
+                    'cdn' => [
+                        '//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
+                        '//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js',
+                    ]
+                ]
+            ],
+            'jvectormap' => [
+                'use_cdn' => false,
+                'location' => 'bottom',
+                'src' => [
+                    'local' => [
+                        asset('admin/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js'),
+                        asset('admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'),
+                    ],
+                ]
+            ],
         ],
         'css' => [
             /**
@@ -436,6 +460,25 @@ return [
             /**
              * Other extensions
              */
+            'morris' => [
+                'use_cdn' => true,
+                'src' => [
+                    'local' => [
+                        asset('admin/plugins/morris/morris.css'),
+                    ],
+                    'cdn' => [
+                        '//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css',
+                    ],
+                ],
+            ],
+            'jvectormap' => [
+                'use_cdn' => false,
+                'src' => [
+                    'local' => [
+                        asset('admin/plugins/jvectormap/jquery-jvectormap-2.0.3.css'),
+                    ],
+                ],
+            ],
         ],
         'fonts' => [
             'open-sans' => [
