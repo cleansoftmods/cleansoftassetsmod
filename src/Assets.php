@@ -1,5 +1,8 @@
 <?php namespace WebEd\Base\AssetsManagement;
 
+/**
+ * @author sangnm <sang.nguyenminh@elinext.com>
+ */
 class Assets
 {
     /**
@@ -47,8 +50,10 @@ class Assets
     {
         if (config('app.env') == 'production') {
             $version = config('webed.version', 2.0);
+            $this->withVersion = config('webed-assets.with_version');
         } else {
             $version = time();
+            $this->withVersion = true;
         }
         $this->version = $version;
     }
@@ -61,9 +66,9 @@ class Assets
     {
         $this->getFrom = $environment;
 
-        $this->js = config('assets.default.' . $environment . '.js');
-        $this->css = config('assets.default.' . $environment . '.css');
-        $this->fonts = config('assets.default.' . $environment . '.fonts');
+        $this->js = config('webed-assets.default.' . $environment . '.js');
+        $this->css = config('webed-assets.default.' . $environment . '.css');
+        $this->fonts = config('webed-assets.default.' . $environment . '.fonts');
 
         return $this;
     }
@@ -83,7 +88,6 @@ class Assets
      * Add javascripts to current module
      *
      * @param array|string $assets
-     * @author sangnm <sang.nguyenminh@elinext.com>
      * @return \WebEd\Base\AssetsManagement\Assets
      */
     public function addJavascripts($assets)
@@ -97,7 +101,6 @@ class Assets
      * Add stylesheets to current module
      *
      * @param array|string $assets
-     * @author sangnm <sang.nguyenminh@elinext.com>
      * @return \WebEd\Base\AssetsManagement\Assets
      */
     public function addStylesheets($assets)
@@ -111,7 +114,6 @@ class Assets
      * Add fonts to current module
      *
      * @param array|string $assets
-     * @author sangnm <sang.nguyenminh@elinext.com>
      * @return \WebEd\Base\AssetsManagement\Assets
      */
     public function addFonts($assets)
@@ -152,8 +154,6 @@ class Assets
      * Remove Css to current module
      *
      * @param array|string $assets
-     * @author sangnm <sang.nguyenminh@elinext.com>
-     * @modify Tedozi Manson <duyphan.developer@gmail.com>
      * @return \WebEd\Base\AssetsManagement\Assets
      */
     public function removeStylesheets($assets)
@@ -168,8 +168,6 @@ class Assets
      * Remove Javascript to current module
      *
      * @param array|string $assets
-     * @author sangnm <sang.nguyenminh@elinext.com>
-     * @modify Tedozi Manson <duyphan.developer@gmail.com>
      * @return \WebEd\Base\AssetsManagement\Assets
      */
     public function removeJavascripts($assets)
@@ -219,12 +217,12 @@ class Assets
             $version .= '?' . $this->version;
         }
         foreach ($this->fonts as $row) {
-            foreach ($this->getResourceUrls(array_get(config('assets.resources.fonts', []), $row)) as $resource) {
+            foreach ($this->getResourceUrls(array_get(config('webed-assets.resources.fonts', []), $row)) as $resource) {
                 $data .= PHP_EOL . '<link rel="stylesheet" type="text/css" href="' . $resource . $version . '"/>';
             }
         }
         foreach ($this->css as $row) {
-            foreach ($this->getResourceUrls(array_get(config('assets.resources.css', []), $row)) as $resource) {
+            foreach ($this->getResourceUrls(array_get(config('webed-assets.resources.css', []), $row)) as $resource) {
                 $data .= PHP_EOL . '<link rel="stylesheet" type="text/css" href="' . $resource . $version . '"/>';
             }
         }
@@ -246,7 +244,7 @@ class Assets
             $version .= '?' . $this->version;
         }
         foreach ($this->js as $row) {
-            foreach ($this->getResourceUrls(array_get(config('assets.resources.js', []), $row), $location) as $resource) {
+            foreach ($this->getResourceUrls(array_get(config('webed-assets.resources.js', []), $row), $location) as $resource) {
                 $data .= PHP_EOL . '<script type="text/javascript" src="' . $resource . $version . '"></script>';
             }
         }
@@ -265,7 +263,7 @@ class Assets
      */
     protected function getResourceUrls(array $resources, $location = null)
     {
-        $isUseCdn = (config('assets.always_use_local')) ? false : (array_get($resources, 'use_cdn', false));
+        $isUseCdn = (config('webed-assets.always_use_local')) ? false : (array_get($resources, 'use_cdn', false));
         if ($isUseCdn) {
             $data = (array)array_get($resources, 'src.cdn');
         } else {
@@ -297,5 +295,25 @@ class Assets
             return true;
         }
         return false;
+    }
+
+    /**
+     * @return array
+     */
+    public function getAssetsList()
+    {
+        return [
+            'js' => [
+                $this->appendedJs,
+                $this->js,
+            ],
+            'css' => [
+                $this->appendedCss,
+                $this->css,
+            ],
+            'fonts' => [
+                $this->fonts
+            ]
+        ];
     }
 }

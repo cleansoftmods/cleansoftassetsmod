@@ -2,7 +2,7 @@
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
-use WebEd\Base\AssetsManagement\Facades\Assets;
+use WebEd\Base\AssetsManagement\Facades\AssetsFacade;
 
 class ModuleProvider extends ServiceProvider
 {
@@ -15,11 +15,10 @@ class ModuleProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind('assets-management', \WebEd\Base\AssetsManagement\Assets::class);
-        AliasLoader::getInstance()->alias('Assets', Assets::class);
+        load_module_helpers(__DIR__);
 
-        $this->mergeConfigFrom(__DIR__ . '/../../config/assets.php', 'assets');
+        AliasLoader::getInstance()->alias('Assets', AssetsFacade::class);
 
-        $this->app->register(BootstrapModuleServiceProvider::class);
+        $this->mergeConfigFrom(__DIR__ . '/../../config/webed-assets.php', 'webed-assets');
     }
 }

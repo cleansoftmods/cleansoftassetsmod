@@ -6,10 +6,14 @@
  */
 return [
     /**
-     * If true, we will get resources from cdn first
+     * If true, we will try to get resources from cdn first
      * If false, we will always get resources from local
      */
     'always_use_local' => true,
+    /**
+     * Append the dependencies version to the url
+     */
+    'with_version' => false,
     /**
      * These assets will be loaded automatically
      */

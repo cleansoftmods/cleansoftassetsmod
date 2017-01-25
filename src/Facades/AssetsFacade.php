@@ -1,15 +1,15 @@
 <?php namespace WebEd\Base\AssetsManagement\Facades;
 
 use Illuminate\Support\Facades\Facade;
+use WebEd\Base\AssetsManagement\Assets;
 
-class Assets extends Facade
+class AssetsFacade extends Facade
 {
     /**
      * @return string
-     * @author sangnm <sang.nguyenminh@elinext.com>
      */
     protected static function getFacadeAccessor()
     {
-        return 'assets-management';
+        return Assets::class;
     }
 }
