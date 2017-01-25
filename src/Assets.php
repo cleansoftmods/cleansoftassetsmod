@@ -50,11 +50,10 @@ class Assets
     {
         if (config('app.env') == 'production') {
             $version = config('webed.version', 2.0);
-            $this->withVersion = config('webed-assets.with_version');
         } else {
             $version = time();
-            $this->withVersion = true;
         }
+        $this->withVersion = config('webed-assets.with_version');
         $this->version = $version;
     }
 
@@ -66,9 +65,9 @@ class Assets
     {
         $this->getFrom = $environment;
 
-        $this->js = config('webed-assets.default.' . $environment . '.js');
-        $this->css = config('webed-assets.default.' . $environment . '.css');
-        $this->fonts = config('webed-assets.default.' . $environment . '.fonts');
+        $this->js = array_merge(config('webed-assets.default.' . $environment . '.js'), $this->js);
+        $this->css = array_merge(config('webed-assets.default.' . $environment . '.css'), $this->css);
+        $this->fonts = array_merge(config('webed-assets.default.' . $environment . '.fonts'), $this->fonts);
 
         return $this;
     }
@@ -214,7 +213,7 @@ class Assets
         $data = '';
         $version = '';
         if ($this->withVersion) {
-            $version .= '?' . $this->version;
+            $version .= '?version=' . $this->version;
         }
         foreach ($this->fonts as $row) {
             foreach ($this->getResourceUrls(array_get(config('webed-assets.resources.fonts', []), $row)) as $resource) {
@@ -241,7 +240,7 @@ class Assets
         $data = '';
         $version = '';
         if ($this->withVersion) {
-            $version .= '?' . $this->version;
+            $version .= '?version=' . $this->version;
         }
         foreach ($this->js as $row) {
             foreach ($this->getResourceUrls(array_get(config('webed-assets.resources.js', []), $row), $location) as $resource) {
