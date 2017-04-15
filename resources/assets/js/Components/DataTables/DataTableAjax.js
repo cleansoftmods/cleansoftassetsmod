@@ -22,8 +22,9 @@ class DataTableAjax {
                 dataTableHelper.getDataTable().ajax.reload();
                 dataTableHelper.clearAjaxParams();
                 dataTableHelper.getTableWrapper().find('input[name=group_checkable]').prop('checked', false);
+                /*Cheat here to fix some bugs*/
                 setTimeout(function () {
-                    dataTableHelper.getDataTable().ajax.reload();
+                    //dataTableHelper.getDataTable().ajax.reload();
                 }, 0);
             } else if (action.val() == "") {
                 WebEd.showNotification('Please select an action', 'danger');
