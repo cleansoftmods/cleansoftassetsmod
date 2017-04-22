@@ -327,7 +327,14 @@ export class WebEd {
             allowedContent: true,
             height: '400px',
         }, config);
-        $elements.ckeditor($.noop, config);
+        $elements.each(function () {
+            let $_self = $(this);
+            let data = $_self.data() || {};
+            if ($_self.data('toolbar') == 'basic' || data.toolbar == 'basic') {
+                data.toolbar = [['mode', 'Source', 'Image', 'TextColor', 'BGColor', 'Styles', 'Format', 'Font', 'FontSize', 'CreateDiv', 'PageBreak', 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', 'RemoveFormat']];
+            }
+            $_self.ckeditor($.noop, $.extend(true, config, data));
+        });
     }
 
     /**
@@ -433,6 +440,21 @@ export class WebEd {
      */
     static hideLoading() {
         $('body').removeClass('on-loading');
+    }
+
+    static fixedTopFormActions() {
+        if ($('#waypoint').length > 0) {
+            new Waypoint({
+                element: document.getElementById('waypoint'),
+                handler: function (direction) {
+                    if (direction == 'down') {
+                        $('.form-actions-fixed-top').removeClass('hidden');
+                    } else {
+                        $('.form-actions-fixed-top').addClass('hidden');
+                    }
+                }
+            });
+        }
     }
 
     /**

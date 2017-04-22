@@ -1,4 +1,4 @@
-class DataTable {
+export class DataTable {
     constructor($table, options = {}) {
         if (!$table) {
             return;

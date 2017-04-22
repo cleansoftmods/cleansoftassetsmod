@@ -37,6 +37,7 @@ return [
                 'bootstrap-confirmation',
                 'jquery-validate',
                 'bootstrap-tagsinput',
+                'jquery-waypoints',
             ],
             'css' => [
                 'bootstrap',
@@ -203,6 +204,13 @@ return [
                         asset('admin/plugins/ckeditor/adapters/jquery.js'),
                     ],
                     'cdn' => null,
+                ],
+            ],
+            'jquery-waypoints' => [
+                'use_cdn' => false,
+                'location' => 'bottom',
+                'src' => [
+                    'local' => asset('admin/plugins/jquery-waypoints/jquery.waypoints.min.js'),
                 ],
             ],
             'fastclick' => [

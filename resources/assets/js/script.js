@@ -28,6 +28,8 @@ $(document).ready(function(){
      * Init layout
      */
     WebEd.initAjax();
+
+    WebEd.fixedTopFormActions();
 });
 
 $(window).load(function () {
