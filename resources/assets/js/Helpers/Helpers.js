@@ -22,8 +22,7 @@ export class Helpers {
         return JSON.stringify(object);
     }
 
-    static jsonDecode(jsonString, defaultValue)
-    {
+    static jsonDecode(jsonString, defaultValue) {
         if (typeof jsonString === 'string') {
             let result;
             try {
@@ -34,5 +33,15 @@ export class Helpers {
             return result;
         }
         return null;
+    }
+
+    static asset(url) {
+        if (url.substring(0, 2) == '//' || url.substring(0, 7) == 'http://' || url.substring(0, 8) == 'https://') {
+            return url;
+        }
+        if (url.substring(0, 1) == '/') {
+            return BASE_URL + url.substring(1);
+        }
+        return BASE_URL + url;
     }
 }

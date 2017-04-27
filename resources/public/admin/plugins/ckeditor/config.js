@@ -11,3 +11,4 @@ CKEDITOR.editorConfig = function( config ) {
     config.extraPlugins = 'codeTag,insertpre';
     config.allowedContent = true;
 };
+CKEDITOR.config.allowedContent = true;

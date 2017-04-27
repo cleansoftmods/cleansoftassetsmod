@@ -71,7 +71,7 @@ export class WebEd {
             event.preventDefault();
             let $current = $(this);
             let $textField = $current.closest('.select-media-modal-external-asset').find('.input-asset');
-            let url = $textField.val();
+            let url = Helpers.asset($textField.val());
             let fileType = ($current.closest('.select-media-modal-external-asset').attr('id') == 'select_media_modal_external_file') ? 'file' : 'image';
 
             let $modal = document.mediaModal;
