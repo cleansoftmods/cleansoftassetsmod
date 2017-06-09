@@ -49,7 +49,7 @@ class Assets
     public function __construct()
     {
         if (config('app.env') == 'production') {
-            $version = config('webed.version', 2.0);
+            $version = get_cms_version();
         } else {
             $version = time();
         }
