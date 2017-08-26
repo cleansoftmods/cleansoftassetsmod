@@ -5,10 +5,6 @@
 
 CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
-	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
-    config.filebrowserBrowseUrl = FILE_MANAGER_URL + '?method=ckeditor';
     config.extraPlugins = 'codeTag,insertpre';
     config.allowedContent = true;
 };
-CKEDITOR.config.allowedContent = true;
