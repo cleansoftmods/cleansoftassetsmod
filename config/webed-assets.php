@@ -45,7 +45,7 @@ return [
                 'bootstrap-tagsinput',
             ],
             'fonts' => [
-                'open-sans',
+                //'open-sans',
                 'font-awesome',
                 'simple-line-icons',
             ],
@@ -75,7 +75,7 @@ return [
                 'location' => 'top',
                 'src' => [
                     'local' => asset('admin/plugins/jquery.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'),
                 ],
             ],
             'jquery-cookie' => [
@@ -83,7 +83,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/js.cookie.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js'),
                 ],
             ],
             'jquery-slimscroll' => [
@@ -91,7 +91,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/jquery-slimscroll/jquery.slimscroll.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js'),
                 ],
             ],
             'jquery-blockui' => [
@@ -99,7 +99,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/jquery.blockui.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js'),
                 ],
             ],
             'jquery-validate' => [
@@ -111,8 +111,8 @@ return [
                         asset('admin/plugins/jquery-validate/js/additional-methods.min.js'),
                     ],
                     'cdn' => [
-                        asset('//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js'),
-                        asset('//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/additional-methods.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/additional-methods.min.js'),
                     ],
                 ],
             ],
@@ -127,8 +127,8 @@ return [
                         asset('admin/modules/datatables/webed.datatable.ajax.js'),
                     ],
                     'cdn' => [
-                        asset('//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js'),
-                        asset('//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/dataTables.bootstrap.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/dataTables.bootstrap.min.js'),
                         asset('admin/modules/datatables/webed.datatable.js'),
                         asset('admin/modules/datatables/webed.datatable.ajax.js'),
                     ]
@@ -143,7 +143,7 @@ return [
                         asset('admin/plugins/sortable/jquery.binding.js'),
                     ],
                     'cdn' => [
-                        asset('//cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js'),
                         asset('admin/plugins/sortable/jquery.binding.js'),
                     ],
                 ],
@@ -153,7 +153,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/jquery-nestable/jquery.nestable.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/Nestable/2012-10-15/jquery.nestable.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/Nestable/2012-10-15/jquery.nestable.min.js'),
                 ],
             ],
             'jquery-select2' => [
@@ -161,7 +161,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/select2/js/select2.full.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js'),
                 ],
             ],
             'jquery-ui' => [
@@ -173,8 +173,8 @@ return [
                         asset('admin/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js'),
                     ],
                     'cdn' => [
-                        asset('//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'),
-                        asset('//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'),
                     ],
                 ],
             ],
@@ -183,7 +183,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/jquery.easing.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'),
                 ],
             ],
             'jquery-notific8' => [
@@ -231,7 +231,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap/js/bootstrap.min.js'),
-                    'cdn' => asset('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'),
+                    'cdn' => url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'),
                 ],
             ],
             'bootstrap-switch' => [
@@ -239,7 +239,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-switch/js/bootstrap-switch.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js'),
                 ],
             ],
             'bootstrap-confirmation' => [
@@ -247,7 +247,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-confirmation/bootstrap-confirmation.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-confirmation/1.0.5/bootstrap-confirmation.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-confirmation/1.0.5/bootstrap-confirmation.min.js'),
                 ],
             ],
             'bootstrap-datepicker' => [
@@ -255,7 +255,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js'),
                 ],
             ],
             'bootstrap-datetimepicker' => [
@@ -263,7 +263,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/js/bootstrap-datetimepicker.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/js/bootstrap-datetimepicker.min.js'),
                 ],
             ],
             'bootstrap-markdown' => [
@@ -271,7 +271,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-markdown/js/bootstrap-markdown.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'),
                 ],
             ],
             'bootstrap-tagsinput' => [
@@ -279,7 +279,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js'),
                 ],
             ],
             'bootstrap-modal' => [
@@ -291,8 +291,8 @@ return [
                         asset('admin/plugins/bootstrap-modal/js/bootstrap-modal.js'),
                     ],
                     'cdn' => [
-                        asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.min.js'),
-                        asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.min.js'),
                     ],
                 ],
             ],
@@ -309,7 +309,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js'),
                 ],
             ],
             /**
@@ -320,7 +320,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/respond.min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js'),
                 ],
             ],
             'excanvas' => [
@@ -336,7 +336,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/modernizr.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'),
                 ],
             ],
             'underscore' => [
@@ -344,7 +344,7 @@ return [
                 'location' => 'bottom',
                 'src' => [
                     'local' => asset('admin/plugins/underscore/underscore-min.js'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'),
                 ]
             ],
             'morris' => [
@@ -356,8 +356,8 @@ return [
                         asset('admin/plugins/morris/morris.min.js'),
                     ],
                     'cdn' => [
-                        asset('//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'),
-                        asset('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js'),
                     ]
                 ]
             ],
@@ -391,8 +391,8 @@ return [
                         asset('admin/plugins/select2/css/select2-bootstrap.min.css'),
                     ],
                     'cdn' => [
-                        asset('//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'),
-                        asset('//cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css'),
                     ],
                 ],
             ],
@@ -400,7 +400,7 @@ return [
                 'use_cdn' => true,
                 'src' => [
                     'local' => asset('admin/plugins/jquery-ui/jquery-ui.min.css'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css'),
                 ],
             ],
             'jquery-notific8' => [
@@ -418,42 +418,42 @@ return [
                 'use_cdn' => true,
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap/css/bootstrap.min.css'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'),
                 ],
             ],
             'bootstrap-switch' => [
                 'use_cdn' => true,
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-switch/css/bootstrap-switch.min.css'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css'),
                 ],
             ],
             'bootstrap-datepicker' => [
                 'use_cdn' => true,
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css'),
                 ],
             ],
             'bootstrap-datetimepicker' => [
                 'use_cdn' => true,
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/css/bootstrap-datetimepicker.min.css'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/css/bootstrap-datetimepicker.min.css'),
                 ],
             ],
             'bootstrap-markdown' => [
                 'use_cdn' => true,
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-markdown/2.10.0/css/bootstrap-markdown.min.css'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-markdown/2.10.0/css/bootstrap-markdown.min.css'),
                 ],
             ],
             'bootstrap-tagsinput' => [
                 'use_cdn' => true,
                 'src' => [
                     'local' => asset('admin/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css'),
-                    'cdn' => asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css'),
+                    'cdn' => url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css'),
                 ],
             ],
             'bootstrap-modal' => [
@@ -464,8 +464,8 @@ return [
                         asset('admin/plugins/bootstrap-modal/css/bootstrap-modal.css'),
                     ],
                     'cdn' => [
-                        asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.min.css'),
-                        asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.min.css'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.min.css'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.min.css'),
                     ],
                 ],
             ],
@@ -479,7 +479,7 @@ return [
                         asset('admin/plugins/morris/morris.css'),
                     ],
                     'cdn' => [
-                        asset('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css'),
+                        url('//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css'),
                     ],
                 ],
             ],
@@ -496,15 +496,15 @@ return [
             'open-sans' => [
                 'use_cdn' => true,
                 'src' => [
-                    'local' => asset('//fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,vietnamese'),
-                    'cdn' => asset('//fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,vietnamese'),
+                    'local' => url('//fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,vietnamese'),
+                    'cdn' => url('//fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,vietnamese'),
                 ],
             ],
             'font-awesome' => [
                 'use_cdn' => true,
                 'src' => [
                     'local' => asset('admin/plugins/font-awesome/css/font-awesome.min.css'),
-                    'cdn' => asset('//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'),
+                    'cdn' => url('//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'),
                 ],
             ],
             'simple-line-icons' => [
