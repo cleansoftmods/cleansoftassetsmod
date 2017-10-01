@@ -304,6 +304,14 @@ return [
                     'cdn' => null,
                 ],
             ],
+            'bootstrap-timepicker' => [
+                'use_cdn' => false,
+                'location' => 'bottom',
+                'src' => [
+                    'local' => asset('admin/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js'),
+                    'cdn' => null,
+                ],
+            ],
             'bootstrap-hover-dropdown' => [
                 'use_cdn' => false,
                 'location' => 'bottom',
@@ -467,6 +475,14 @@ return [
                         url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.min.css'),
                         url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.min.css'),
                     ],
+                ],
+            ],
+            'bootstrap-timepicker' => [
+                'use_cdn' => false,
+                'location' => 'bottom',
+                'src' => [
+                    'local' => asset('admin/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css'),
+                    'cdn' => null,
                 ],
             ],
             /**
